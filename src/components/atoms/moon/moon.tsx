@@ -1,4 +1,4 @@
-import { useWindowSize } from 'react-use';
+import useWindowSize from 'react-use/lib/useWindowSize';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import moonUrl from '../../../../static/assets/moon.webp';
 
@@ -13,7 +13,7 @@ export const Moon = () => {
     <motion.img
       src={moonUrl}
       alt="Moon"
-      className="md:right-[0] md:bottom-[-45%] md:max-w-[75vw] absolute bottom-[-10%] z-0"
+      className="absolute bottom-[-10%] z-0 md:right-[0] md:bottom-[-45%] md:max-w-[75vw]"
       style={{ scale }}
     />
   );

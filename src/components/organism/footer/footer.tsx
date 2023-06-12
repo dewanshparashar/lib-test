@@ -1,5 +1,5 @@
-import { ReactComponent as Discord } from '../../../../static/assets/discord.svg';
-import { ReactComponent as Twitter } from '../../../../static/assets/twitter.svg';
+import Discord from '../../../../static/assets/discord.svg';
+import Twitter from '../../../../static/assets/twitter.svg';
 import { ExternalLink } from '../../atoms/link';
 
 type FooterLink = {
@@ -62,13 +62,13 @@ export const Footer = () => {
               href="https://discord.com/invite/ZpZuw7p"
               className="h-7 w-7"
             >
-              <Discord className="w-full" />
+              <img src={Discord} alt="Discord" className="w-full" />
             </ExternalLink>
             <ExternalLink
               href="https://twitter.com/OffchainLabs"
               className="h-7 w-7"
             >
-              <Twitter className="w-full" />
+              <img src={Twitter} alt="Twitter" className="w-full" />
             </ExternalLink>
           </div>
         </div>
