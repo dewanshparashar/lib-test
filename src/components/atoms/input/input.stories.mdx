@@ -1,0 +1,197 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  ArgsTable,
+  Description,
+} from '@storybook/addon-docs';
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+
+import { Input } from './input';
+
+# Input
+
+<Meta title="Cobalt/Input" component={Input} />
+
+export const Template = (args) => <Input {...args} />;
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      placeholder: 'Default',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Search"
+    args={{
+      placeholder: 'Search',
+      icon: (
+        <MagnifyingGlassIcon className="h-5 w-5 stroke-default-black stroke-2" />
+      ),
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Custom"
+    args={{
+      placeholder: 'Custom',
+      className:
+        'uppercase text-transparent bg-gradient-to-r from-sky-500 to-indigo-500',
+      styles: {
+        input: 'placeholder:text-white/70 text-white',
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+#### Disabled
+
+<Canvas>
+  <Story
+    name="Disabled"
+    args={{
+      placeholder: 'Disabled',
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Disabled with Text"
+    args={{
+      placeholder: 'Disabled',
+      value: 'This is some text',
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Disabled Search"
+    args={{
+      placeholder: 'Disabled Search',
+      icon: (
+        <MagnifyingGlassIcon className="h-5 w-5 stroke-default-black/50 stroke-2" />
+      ),
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+#### Error
+
+<Canvas>
+  <Story
+    name="Default Error"
+    args={{
+      placeholder: 'Default Error',
+      value: 'Something',
+      isError: true,
+      errorMessage: 'Error message goes here',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Search Error"
+    args={{
+      placeholder: 'Search Error',
+      value: 'Defigenerator',
+      icon: (
+        <MagnifyingGlassIcon className="h-5 w-5 stroke-default-black stroke-2" />
+      ),
+      isError: true,
+      errorMessage: 'Error message goes here',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Custom Error"
+    args={{
+      placeholder: 'Custom Error',
+      className:
+        'uppercase text-transparent bg-gradient-to-r from-sky-500 to-indigo-500',
+      styles: {
+        input: 'placeholder:text-white/70 text-white',
+      },
+      isError: true,
+      errorMessage: 'Error message goes here',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Pill-shaped
+
+<Canvas>
+  <Story
+    name="Pill Default"
+    args={{
+      placeholder: 'Pill Default',
+      variant: 'pill',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Pill Search"
+    args={{
+      placeholder: 'Pill Search',
+      icon: (
+        <MagnifyingGlassIcon className="h-5 w-5 stroke-default-black stroke-2" />
+      ),
+      variant: 'pill',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Pill Disabled"
+    args={{
+      placeholder: 'Pill Disabled',
+      disabled: true,
+      variant: 'pill',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Pill Disabled with Text"
+    args={{
+      placeholder: 'Pill Disabled',
+      value: 'This is some text',
+      disabled: true,
+      variant: 'pill',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Pill Disabled Search"
+    args={{
+      placeholder: 'Pill Disabled Search',
+      icon: (
+        <MagnifyingGlassIcon className="h-5 w-5 stroke-default-black/50 stroke-2" />
+      ),
+      disabled: true,
+      variant: 'pill',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Args
+
+<Description of={Input} />
+<ArgsTable of={Input} />

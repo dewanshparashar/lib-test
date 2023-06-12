@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-error: #cd0000;
+  --color-blue-link: #1366c1;
+  --color-default-black: #1a1c1d;
+}
+
+html {
+  font-weight: 300;
+}
+
+/*
+  Custom
+*/
+.arb-hover {
+  @apply transition duration-200 hover:opacity-80 focus-visible:ring-2 focus-visible:ring-gray-6 active:opacity-90 disabled:border-0 disabled:opacity-100;
+}
+
+.hover\:animate-rotate-180:hover {
+  transform: rotate(180deg);
+}
+
+.hover\:bg-\[rgba\(0\,0\,0\,0\.2\)\]:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.focus-visible\:animate-rotate-180:focus-visible {
+  transform: rotate(180deg);
+}
+
+.bg-gradient-overlay {
+  background: linear-gradient(
+    179.53deg,
+    #000000 19.46%,
+    rgba(0, 0, 0, 0.650795) 40.76%,
+    rgba(0, 0, 0, 0.462631) 60.09%,
+    rgba(255, 255, 255, 0) 99.6%
+  );
+}
+
+.text-explore-arbitrum-project-name {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+/*
+    animate.css (https://github.com/animate-css/animate.css
+  */
+.animate__animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+.animate__flipInX {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX;
+}

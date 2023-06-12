@@ -1,0 +1,525 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  ArgsTable,
+  Description,
+} from '@storybook/addon-docs';
+import {
+  ArrowSmallLeftIcon,
+  ArrowLeftIcon,
+  ChartPieIcon,
+} from '@heroicons/react/20/solid';
+
+import logoFile from '../../../../static/assets/logo.png';
+import { Button } from './button';
+
+# Button
+
+<Meta title="Cobalt/Button" component={Button} />
+
+export const Template = (args) => <Button {...args} />;
+
+They come in two levels — Small and Large. Mobile uses Large.
+
+### Small
+
+<Canvas>
+  <Story
+    name="Primary"
+    args={{
+      variant: 'primary',
+      children: 'Primary',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary"
+    args={{
+      variant: 'secondary',
+      children: 'Secondary',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Tertiary"
+    args={{
+      variant: 'tertiary',
+      children: 'Tertiary',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+<Canvas>
+  <Story
+    name="Primary Disabled"
+    args={{
+      variant: 'primary',
+      children: 'Primary',
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary Disabled"
+    args={{
+      variant: 'secondary',
+      children: 'Secondary',
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Tertiary Disabled"
+    args={{
+      variant: 'tertiary',
+      children: 'Tertiary',
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Large
+
+<Canvas>
+  <Story
+    name="Primary Large"
+    args={{
+      variant: 'primary',
+      children: 'Primary',
+      size: 'large',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary Large"
+    args={{
+      variant: 'secondary',
+      children: 'Secondary',
+      size: 'large',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Tertiary Large"
+    args={{
+      variant: 'tertiary',
+      children: 'Tertiary',
+      size: 'large',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+<Canvas>
+  <Story
+    name="Primary Large Disabled"
+    args={{
+      variant: 'primary',
+      children: 'Primary',
+      disabled: true,
+      size: 'large',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary Large Disabled"
+    args={{
+      variant: 'secondary',
+      children: 'Secondary',
+      disabled: true,
+      size: 'large',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Tertiary Large Disabled"
+    args={{
+      variant: 'tertiary',
+      children: 'Tertiary',
+      disabled: true,
+      size: 'large',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### With icon
+
+<Canvas>
+  <Story
+    name="Primary Icon"
+    args={{
+      variant: 'primary',
+      children: 'Primary',
+      icon: <ArrowSmallLeftIcon />,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary Icon"
+    args={{
+      variant: 'secondary',
+      children: 'Secondary',
+      icon: <ChartPieIcon />,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Tertiary Icon"
+    args={{
+      variant: 'tertiary',
+      children: 'Tertiary',
+      icon: <ArrowLeftIcon />,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Primary Icon Disabled"
+    args={{
+      variant: 'primary',
+      children: 'Primary',
+      icon: <ArrowSmallLeftIcon />,
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary Icon Disabled"
+    args={{
+      variant: 'secondary',
+      children: 'Secondary',
+      icon: <ChartPieIcon />,
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Tertiary Icon Disabled"
+    args={{
+      variant: 'tertiary',
+      children: 'Tertiary',
+      icon: <ArrowLeftIcon />,
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Logo
+
+export const logo = {
+  src: logoFile,
+  alt: 'logo',
+};
+
+<Canvas>
+  <Story
+    name="Primary Logo"
+    args={{
+      variant: 'primary',
+      children: 'Primary',
+      logo: <img src={logo.src} alt={logo.alt} />,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary Logo"
+    args={{
+      variant: 'secondary',
+      children: 'Secondary',
+      logo: <img src={logo.src} alt={logo.alt} />,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Tertiary Logo"
+    args={{
+      variant: 'tertiary',
+      children: 'Tertiary',
+      logo: <img src={logo.src} alt={logo.alt} />,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Primary Large Logo"
+    args={{
+      variant: 'primary',
+      children: 'Primary',
+      logo: <img src={logo.src} alt={logo.alt} />,
+      size: 'large',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary Large Logo"
+    args={{
+      variant: 'secondary',
+      children: 'Secondary',
+      logo: <img src={logo.src} alt={logo.alt} />,
+      size: 'large',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Tertiary Large Logo"
+    args={{
+      variant: 'tertiary',
+      children: 'Tertiary',
+      logo: <img src={logo.src} alt={logo.alt} />,
+      size: 'large',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Primary Logo Disabled"
+    args={{
+      variant: 'primary',
+      children: 'Primary',
+      logo: <img src={logo.src} alt={logo.alt} />,
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary Logo Disabled"
+    args={{
+      variant: 'secondary',
+      children: 'Secondary',
+      logo: <img src={logo.src} alt={logo.alt} />,
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Tertiary Logo Disabled"
+    args={{
+      variant: 'tertiary',
+      children: 'Tertiary',
+      logo: <img src={logo.src} alt={logo.alt} />,
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Loading
+
+<Canvas>
+  <Story
+    name="Primary Loading"
+    args={{
+      variant: 'primary',
+      children: 'Primary',
+      loading: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary Loading"
+    args={{
+      variant: 'secondary',
+      children: 'Secondary',
+      loading: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Tertiary Loading"
+    args={{
+      variant: 'tertiary',
+      children: 'Tertiary',
+      loading: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Primary Large Loading"
+    args={{
+      variant: 'primary',
+      children: 'Primary',
+      loading: true,
+      size: 'large',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary Large Loading"
+    args={{
+      variant: 'secondary',
+      children: 'Secondary',
+      loading: true,
+      size: 'large',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Tertiary Large Loading"
+    args={{
+      variant: 'tertiary',
+      children: 'Tertiary',
+      loading: true,
+      size: 'large',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Primary Icon Loading"
+    args={{
+      variant: 'primary',
+      children: 'Primary',
+      icon: <ArrowSmallLeftIcon />,
+      loading: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary Icon Loading"
+    args={{
+      variant: 'secondary',
+      children: 'Secondary',
+      icon: <ArrowSmallLeftIcon />,
+      loading: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Tertiary Icon Loading"
+    args={{
+      variant: 'tertiary',
+      children: 'Tertiary',
+      icon: <ArrowSmallLeftIcon />,
+      loading: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Custom Colors
+
+<Canvas>
+  <Story
+    name="Primary Nova"
+    args={{
+      variant: 'primary',
+      children: 'Primary',
+      className:
+        'bg-brown-nova-900 hover:bg-brown-nova-700 active:bg-brown-nova-800',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary Nova"
+    args={{
+      variant: 'secondary',
+      children: 'Secondary',
+      className:
+        'text-brown-nova-900 hover:text-brown-nova-700 active:text-brown-nova-800',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Tertiary Nova"
+    args={{
+      variant: 'tertiary',
+      children: 'Tertiary',
+      className: 'text-brown-nova-900',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Primary Nova Disabled"
+    args={{
+      variant: 'primary',
+      children: 'Primary',
+      className: 'bg-brown-nova',
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Secondary Nova Disabled"
+    args={{
+      variant: 'secondary',
+      children: 'Secondary',
+      className: 'text-brown-nova',
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Tertiary Nova Disabled"
+    args={{
+      variant: 'tertiary',
+      children: 'Tertiary',
+      className: 'text-brown-nova',
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Args
+
+<Description of={Button} />
+<ArgsTable of={Button} />

@@ -1,0 +1,95 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  ArgsTable,
+  Description,
+} from '@storybook/addon-docs';
+
+import { Tag } from './tag';
+
+# Tag
+
+<Meta title="Cobalt/Tag" component={Tag} />
+
+export const Template = (args) => <Tag {...args} />;
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      children: 'Default',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Lime"
+    args={{
+      children: 'Lime',
+      variant: 'lime',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Orange"
+    args={{
+      children: 'Orange',
+      variant: 'orange',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Brick"
+    args={{
+      children: 'Brick',
+      variant: 'brick',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Cyan"
+    args={{
+      children: 'Cyan',
+      variant: 'cyan',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Gray"
+    args={{
+      children: 'Gray',
+      variant: 'gray',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Custom"
+    args={{
+      children: 'Custom',
+      className:
+        'uppercase bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-indigo-500',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Longer Text Lime"
+    args={{
+      children: 'This is a tag',
+      variant: 'lime',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Args
+
+<Description of={Tag} />
+<ArgsTable of={Tag} />

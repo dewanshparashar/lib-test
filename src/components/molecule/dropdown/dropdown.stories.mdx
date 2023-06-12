@@ -1,0 +1,49 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  ArgsTable,
+  Description,
+} from '@storybook/addon-docs';
+import { Squares2X2Icon } from '@heroicons/react/24/outline';
+
+import { Dropdown } from './dropdown';
+import { DropdownButton } from './dropdownButton';
+import { DropdownPanel } from './dropdownPanel';
+
+# Dropdown
+
+<Meta title="Cobalt/Dropdown" component={Dropdown} />
+
+export const Template = (args) => <Dropdown {...args} />;
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      children: (
+        <>
+          <DropdownButton>Browse</DropdownButton>
+          <DropdownPanel>Whatever content</DropdownPanel>
+        </>
+      ),
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With icon"
+    args={{
+      children: (
+        <div>
+          <DropdownButton icon={<Squares2X2Icon />}>Browse</DropdownButton>
+          <DropdownPanel>
+            Some content here but it will usually be a list
+          </DropdownPanel>
+        </div>
+      ),
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

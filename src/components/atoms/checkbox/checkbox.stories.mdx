@@ -1,0 +1,152 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  ArgsTable,
+  Description,
+} from '@storybook/addon-docs';
+import { ArrowSmallLeftIcon } from '@heroicons/react/20/solid';
+
+import logoFile from '../../../../static/assets/logo.png';
+import { Checkbox } from './checkbox';
+
+# Checkbox
+
+<Meta title="Cobalt/Checkbox" component={Checkbox} />
+
+export const Template = (args) => <Checkbox {...args} />;
+
+export const logo = {
+  src: logoFile,
+  alt: 'logo',
+};
+
+The Checkbox component is responsive with different styles pre- and post- breakpoint `md` (minimum width 768px). Change the browser size to see the different styles.
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      children: 'Default',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Customised Styles"
+    args={{
+      children: 'Customised Styles',
+      styles: {
+        input:
+          '[&:checked~span:first-of-type]:border-dark-cyan [&:checked~span:first-of-type]:bg-dark-cyan',
+        labelText: 'peer-checked:text-dark-cyan',
+      },
+      defaultChecked: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Mobile Styles Disabled"
+    args={{
+      children: 'Mobile Styles Disabled',
+      enlargeOnMobile: false,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With Logo"
+    args={{
+      children: 'With Logo',
+      checkboxId: 'withLogo',
+      logo: <img src={logo.src} alt={logo.alt} />,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Read Only Unchecked"
+    args={{
+      children: 'Read Only Unchecked',
+      readOnly: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Read Only Checked"
+    args={{
+      children: 'Read Only Checked',
+      readOnly: true,
+      defaultChecked: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+#### Disabled
+
+<Canvas>
+  <Story
+    name="Default Disabled"
+    args={{
+      children: 'Default Disabled',
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Checked Disabled"
+    args={{
+      children: 'Checked Disabled',
+      defaultChecked: true,
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Customised Styles Disabled"
+    args={{
+      children: 'Customised Styles Disabled',
+      styles: {
+        checkboxWrapper:
+          'peer-checked:border-dark-cyan peer-checked:bg-dark-cyan',
+        labelText: 'text-dark-cyan',
+        checkIcon: 'stroke-white',
+      },
+      defaultChecked: true,
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Mobile Styles Disabled (Disabled Checkbox)"
+    args={{
+      children: 'Mobile Styles Disabled (Disabled Checkbox)',
+      enlargeOnMobile: false,
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With Logo Disabled"
+    args={{
+      children: 'With Logo Disabled',
+      logo: <img src={logo.src} alt={logo.alt} />,
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Args
+
+<Description of={Checkbox} />
+<ArgsTable of={Checkbox} />

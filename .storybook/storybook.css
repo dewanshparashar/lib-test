@@ -1,0 +1,6 @@
+[id^='anchor--cobalt-input'] ~ div .innerZoomElementWrapper,
+[id^='anchor--cobalt-dropdown'] ~ div .innerZoomElementWrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}

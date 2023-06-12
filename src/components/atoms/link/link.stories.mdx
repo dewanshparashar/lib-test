@@ -1,0 +1,76 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  ArgsTable,
+  Description,
+} from '@storybook/addon-docs';
+
+import { Link } from './link';
+import { ExternalLink } from './externalLink';
+
+# Link
+
+<Meta title="Cobalt/Link" component={Link} />
+
+export const LinkTemplate = (args) => <Link {...args} />;
+
+<Canvas>
+  <Story
+    name="Default Link"
+    args={{
+      children: 'Relative Link',
+      href: '../',
+    }}
+  >
+    {LinkTemplate.bind({})}
+  </Story>
+  <Story
+    name="Default Black Link"
+    args={{
+      children: 'Default Black Link',
+      className: 'text-default-black',
+      href: '../',
+    }}
+  >
+    {LinkTemplate.bind({})}
+  </Story>
+  <Story
+    name="Custom Link"
+    args={{
+      children: 'Custom Link',
+      className:
+        'uppercase bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-indigo-500',
+      href: '../',
+    }}
+  >
+    {LinkTemplate.bind({})}
+  </Story>
+</Canvas>
+
+# ExternalLink
+
+export const ExternalLinkTemplate = (args) => <ExternalLink {...args} />;
+
+<Canvas>
+  <Story
+    name="Default External Link"
+    args={{
+      children: 'Default',
+      href: 'https://bridge.arbitrum.io',
+    }}
+  >
+    {ExternalLinkTemplate.bind({})}
+  </Story>
+  <Story
+    name="Custom External Link"
+    args={{
+      children: 'Custom',
+      className:
+        'uppercase bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-indigo-500',
+      href: 'https://bridge.arbitrum.io',
+    }}
+  >
+    {ExternalLinkTemplate.bind({})}
+  </Story>
+</Canvas>

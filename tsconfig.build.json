@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "webpack",
+    "jest",
+    "stories/**",
+    ".storybook",
+    "**/*.md",
+    "**/*.stories.tsx",
+    "**/*.stories.mdx/",
+    "coverage",
+    "storybook-static",
+    "src/components/**/*.test.tsx",
+    "**/*.stories.mdx"
+  ]
+}

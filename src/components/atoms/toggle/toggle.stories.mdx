@@ -1,0 +1,77 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  ArgsTable,
+  Description,
+} from '@storybook/addon-docs';
+import { Toggle } from './toggle';
+
+# Toggle
+
+<Meta title="Cobalt/Toggle" component={Toggle} />
+
+export const Template = (args) => <Toggle {...args} />;
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      children: 'Default',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Custom"
+    args={{
+      children: 'Custom',
+      styles: {
+        switchBox:
+          'bg-gradient-to-r from-sky-500/30 to-sky-500/30 ui-checked:from-sky-500 ui-checked:to-indigo-500',
+        text: 'uppercase bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-indigo-500',
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Checked"
+    args={{
+      children: 'Checked',
+      defaultChecked: true,
+      onChange: () => {
+        console.log('yes it works');
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Disabled Unchecked"
+    args={{
+      children: 'Disabled Unchecked',
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Disabled Checked"
+    args={{
+      children: 'Disabled Checked',
+      defaultChecked: true,
+      disabled: true,
+      onChange: () => {
+        console.log("please don't show anything");
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Args
+
+<Description of={Toggle} />
+<ArgsTable of={Toggle} />

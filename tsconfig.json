@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "jsx": "react-jsx",
+    "declaration": true,
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "declarationMap": true,
+    "esModuleInterop": false,
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "resolveJsonModule": true,
+    "rootDir": "./src",
+    "sourceMap": true,
+    "strict": true,
+    "types": ["jest", "node"]
+  },
+  "include": ["src/**/*", "src/custom.d.ts"],
+  "exclude": ["**/node_modules", "**/build", "**/dist", "**/*.md"]
+}
