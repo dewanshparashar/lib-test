@@ -13,7 +13,7 @@ export const Moon = () => {
     <motion.img
       src={moonUrl}
       alt="Moon"
-      className="absolute bottom-[-10%] z-0 md:right-[0] md:bottom-[-45%] md:max-w-[75vw]"
+      className="absolute bottom-[-10%] z-0 md:bottom-[-45%] md:right-[0] md:max-w-[75vw]"
       style={{ scale }}
     />
   );

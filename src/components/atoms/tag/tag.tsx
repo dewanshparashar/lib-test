@@ -32,7 +32,7 @@ export const Tag = ({
   return (
     <span
       className={twMerge(
-        `inline-block cursor-default rounded-full py-1 px-3 text-sm leading-7`,
+        `inline-block cursor-default rounded-full px-3 py-1 text-sm leading-7`,
         variantStyles(variant),
         className,
       )}

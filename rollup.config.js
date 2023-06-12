@@ -5,12 +5,13 @@ import image from '@rollup/plugin-image';
 
 import { visualizer } from 'rollup-plugin-visualizer';
 import { terser } from 'rollup-plugin-terser';
+import svgr from '@svgr/rollup'
 
 export default {
   input: './src/index.ts',
   output: {
     dir: 'dist',
-    format: 'esm',
+    format: 'cjs',
   },
   plugins: [
     resolve(),
@@ -20,6 +21,7 @@ export default {
       declaration: true,
       declarationDir: 'dist',
     }),
+    svgr(),
     image(),
     terser(),
     visualizer({

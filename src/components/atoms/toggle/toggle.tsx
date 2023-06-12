@@ -51,7 +51,7 @@ export const Toggle = ({
         >
           <span
             className={twMerge(
-              'duration-400 absolute top-[3px] left-[3px] h-[10px] w-[10px] rounded-full transition-all ui-checked:left-[19px]',
+              'duration-400 absolute left-[3px] top-[3px] h-[10px] w-[10px] rounded-full transition-all ui-checked:left-[19px]',
               disabled ? 'bg-gray-4' : 'bg-white shadow-toggle-button',
               styles?.switchButton,
             )}

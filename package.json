@@ -1,7 +1,7 @@
 {
   "name": "dewcobalt",
-  "version": "0.25.0",
-  "description": "Arbitrum's shared component library",
+  "version": "0.30.0",
+  "description": "Testing Arbitrum's shared component library",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -9,7 +9,6 @@
   "outputDir": "./dist",
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "type": "module",
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -38,6 +37,7 @@
     "@storybook/mdx2-csf": "^0.0.4",
     "@storybook/react": "^6.5.15",
     "@storybook/testing-library": "^0.0.13",
+    "@svgr/rollup": "^8.0.1",
     "@svgr/webpack": "^6.5.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -64,6 +64,8 @@
     "jest-environment-jsdom": "^29.4.0",
     "prettier": "^2.8.3",
     "prettier-plugin-tailwindcss": "^0.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-loader-spinner": "^5.3.4",
     "react-use": "^17.4.0",
     "rimraf": "^5.0.1",
@@ -75,9 +77,7 @@
     "tailwindcss": "^3.2.4",
     "ts-jest": "^29.0.5",
     "tslib": "^2.5.3",
-    "typescript": "^4.9.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "typescript": "^4.9.4"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
