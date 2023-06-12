@@ -7,13 +7,10 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import { terser } from 'rollup-plugin-terser';
 
 export default {
-  input: ['./src/index.ts'],
+  input: './src/index.ts',
   output: {
     dir: 'dist',
     format: 'esm',
-    preserveModules: true,
-    preserveModulesRoot: 'src',
-    sourcemap: true,
   },
   plugins: [
     resolve(),
